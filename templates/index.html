@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TRIbe Weather</title>
+
+    <!-- CSS & Bootstrap -->
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{url_for('static', filename='icon/sun.png')}}">
+    <!-- images/nesto -->
+</head>
+
+<body style=" color: #fff; background-image: url(static/ODUD5I0.jpg); background-repeat: no-repeat;">
+    <div class="heading">
+        <img src="{{url_for('static', filename='Untitled (8).png')}}" alt="Image" class="img">
+    </div>
+
+    <form method="POST" class="city">
+        <div class="form-group">
+            <input type="text" name="city" class="form-control" placeholder="Find your city" style="background-color: #1b262c; border-width: 1px; border-radius: 25px; width: 400px; text-align-last:center; color: #fff">
+            <small class="form-text text-muted">Type in a city name witch you want to see the
+                temperature for</small>
+        </div>
+        <button type="submit" class="btn btn-primary" style="border-radius: 25px; width: 150px; height: 50px; margin-top: 0px; margin-bottom: 10px;">Find
+            city</button>
+    </form>
+
+    <h2>{{ weather.city}}, {{weather.country}}, {{weather.today}}</h2>
+
+    <div class="card-group" style="margin-left: 50px; margin-right: 50px; color: #000;">
+        <div class="card">
+            <div class="card-body">
+                <p>(Today) {{weather.day1}}</p>
+
+                <span>Temperature: {{weather.temperature1}}‎ ° C <img src="http://openweathermap.org/img/w/{{ weather.icon1 }}.png" alt="Image"></span>
+                <p>Description: {{weather.description1}}</p>
+                <p>Feels like: {{weather.feels_like1}} ° C</p>
+                <p>Humidity Pressure Wind speed</p>
+                <p>
+                    <span><img src="{{url_for('static', filename='icon/humidity (1).png')}}" alt="">  {{weather.humidity5}} %  </span>
+                    <span><img src="{{url_for('static', filename='icon/pressure-indicator.png')}}" alt="">  {{weather.pressure5}}  </span>
+                    <span><img src="{{url_for('static', filename='icon/wind.png')}}" alt="">  {{weather.wind_speed5}} m/s  </span>
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <p>{{weather.day2}}</p>
+
+                <span>Temperature: {{weather.temperature2}}‎°C <img src="http://openweathermap.org/img/w/{{ weather.icon2 }}.png" alt="Image"></span>
+                <p>Description: {{weather.description2}}</p>
+                <p>Feels like: {{weather.feels_like2}} ° C </p>
+                <p>Humidity Pressure Wind speed</p>
+                <p>
+                    <span><img src="{{url_for('static', filename='icon/humidity (1).png')}}" alt="">  {{weather.humidity5}} %  </span>
+                    <span><img src="{{url_for('static', filename='icon/pressure-indicator.png')}}" alt="">  {{weather.pressure5}}  </span>
+                    <span><img src="{{url_for('static', filename='icon/wind.png')}}" alt="">  {{weather.wind_speed5}} m/s  </span>
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <p>{{weather.day3}}</p>
+
+                <span>Temperature: {{weather.temperature3}}‎°C <img src="http://openweathermap.org/img/w/{{ weather.icon3 }}.png" alt="Image"></span>
+                <p>Description: {{weather.description3}}</p>
+                <p>Feels like: {{weather.feels_like3}} ° C </p>
+                <p>Humidity Pressure Wind speed</p>
+                <p>
+                    <span><img src="{{url_for('static', filename='icon/humidity (1).png')}}" alt="">  {{weather.humidity5}} %  </span>
+                    <span><img src="{{url_for('static', filename='icon/pressure-indicator.png')}}" alt="">  {{weather.pressure5}}  </span>
+                    <span><img src="{{url_for('static', filename='icon/wind.png')}}" alt="">  {{weather.wind_speed5}} m/s  </span>
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <p>{{weather.day4}}</p>
+
+                <span>Temperature: {{weather.temperature4}}‎°C <img src="http://openweathermap.org/img/w/{{ weather.icon4 }}.png" alt="Image"></span>
+                <p>Description: {{weather.description4}}</p>
+                <p>Feels like: {{weather.feels_like4}} ° C </p>
+                <p>Humidity Pressure Wind speed</p>
+                <p>
+                    <span><img src="{{url_for('static', filename='icon/humidity (1).png')}}" alt="">  {{weather.humidity5}} %  </span>
+                    <span><img src="{{url_for('static', filename='icon/pressure-indicator.png')}}" alt="">  {{weather.pressure5}}  </span>
+                    <span><img src="{{url_for('static', filename='icon/wind.png')}}" alt="">  {{weather.wind_speed5}} m/s  </span>
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <p>{{weather.day5}}</p>
+
+                <span>Temperature: {{weather.temperature5}}‎°C <img src="http://openweathermap.org/img/w/{{ weather.icon5 }}.png" alt="Image"></span>
+                <p>Description: {{weather.description5}}</p>
+                <p>Feels like: {{weather.feels_like5}} ° C </p>
+                <p>Humidity Pressure Wind speed</p>
+                <p>
+                    <span><img src="{{url_for('static', filename='icon/humidity (1).png')}}" alt="">  {{weather.humidity5}} %  </span>
+                    <span><img src="{{url_for('static', filename='icon/pressure-indicator.png')}}" alt="">  {{weather.pressure5}}  </span>
+                    <span><img src="{{url_for('static', filename='icon/wind.png')}}" alt="">  {{weather.wind_speed5}} m/s  </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer style="margin-top: 100px;">
+        <form action="https://aqueous-fortress-48207.herokuapp.com/" class="subscribe-form" target="_blank">
+            <button type="submit" class="btn btn-primary" style="border-radius: 25px; width: 150px; height: 50px;">Subscribe</button>
+        </form>
+        <p class="colophon" style="color: #000;">&copy Copyright 2019 TRIbe Weather App All rights reserved</p>
+    </footer>
+
+</body>
+
+</html>
