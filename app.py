@@ -22,7 +22,6 @@ def index_get():
         spamreader = csv.reader(csvfile)
         for row in spamreader:
             city = row[0]
-    print(city)
     r = get_weather_data(city)
 
     weather = {
@@ -72,7 +71,6 @@ def index_get():
             'wind_speed4' : r['list'][24]['wind']['speed'],
             'wind_speed5' : r['list'][32]['wind']['speed']
         }
-    pprint.pprint(weather)
     return render_template('index.html', weather=weather)
 
 @app.route('/', methods=['POST'])

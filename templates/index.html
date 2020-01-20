@@ -17,96 +17,96 @@
     <!-- images/nesto -->
 </head>
 
-<body style=" color: #fff; background-image: url(static/ODUD5I0.jpg); background-repeat: no-repeat;">
+<body style=" color: #fff; background-image: url(static/{{weather.icon1}}.jpg); background-repeat: no-repeat; background-size: cover;">
     <div class="heading">
-        <img src="{{url_for('static', filename='Untitled (8).png')}}" alt="Image" class="img">
+        <img src="{{url_for('static', filename='Weather (3).png')}}" alt="Image" class="img">
     </div>
 
     <form method="POST" class="city">
         <div class="form-group">
             <input type="text" name="city" class="form-control" placeholder="Find your city" style="background-color: #1b262c; border-width: 1px; border-radius: 25px; width: 400px; text-align-last:center; color: #fff">
-            <small class="form-text text-muted">Type in a city name witch you want to see the
+            <small class="form-text text-muted" style="text-decoration-color: #fff;">Type in a city name witch you want to see the
                 temperature for</small>
         </div>
-        <button type="submit" class="btn btn-primary" style="border-radius: 25px; width: 150px; height: 50px; margin-top: 0px; margin-bottom: 10px;">Find
+        <button type="submit" class="btn btn-primary" style="border-radius: 25px; width: 150px; height: 50px; margin-top: px; margin-bottom: 10px; font-size: x-large;">Find
             city</button>
     </form>
 
-    <h2>{{ weather.city}}, {{weather.country}}, {{weather.today}}</h2>
+    <h2 style="color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">{{ weather.city}}, {{weather.country}}, {{weather.today}}</h2>
 
     <div class="card-group" style="margin-left: 50px; margin-right: 50px; color: #000;">
-        <div class="card">
+        <div class="card" style="border-radius: 35px;">
             <div class="card-body">
-                <p>(Today) {{weather.day1}}</p>
+                <H3 style="text-transform: uppercase;"> (TODAY) {{weather.day1}}</H3>
 
-                <span>Temperature: {{weather.temperature1}}‎ ° C <img src="http://openweathermap.org/img/w/{{ weather.icon1 }}.png" alt="Image"></span>
-                <p>Description: {{weather.description1}}</p>
-                <p>Feels like: {{weather.feels_like1}} ° C</p>
-                <p>Humidity Pressure Wind speed</p>
+                <p style="text-align: left; font-size: 22px;">Temperature: <b>{{weather.temperature1}}</b>‎ ° C <img src="http://openweathermap.org/img/w/{{ weather.icon1 }}.png" alt="Image"></p>
+                <p style="text-align: left;">Description: {{weather.description1}}</p>
+                <p style="text-align: left; padding-bottom: 20px;">Feels like: <b>{{weather.feels_like1}} ° C </b></p>
+                <!-- <p style="text-align: left;">Humidity Pressure Wind speed</p> -->
                 <p>
-                    <span><img src="{{url_for('static', filename='icon/humidity (1).png')}}" alt="">  {{weather.humidity5}} %  </span>
-                    <span><img src="{{url_for('static', filename='icon/pressure-indicator.png')}}" alt="">  {{weather.pressure5}}  </span>
-                    <span><img src="{{url_for('static', filename='icon/wind.png')}}" alt="">  {{weather.wind_speed5}} m/s  </span>
+                    <span style="padding-right: 10px;"><img src="{{url_for('static', filename='icon/humidity (1).png')}}" alt="">  {{weather.humidity1}} %  </span>
+                    <span style="padding-right: 10px;"><img src="{{url_for('static', filename='icon/pressure-indicator.png')}}" alt="">  {{weather.pressure1}}  </span>
+                    <span style="padding-right: 10px;"><img src="{{url_for('static', filename='icon/wind.png')}}" alt="">  {{weather.wind_speed1}} m/s  </span>
                 </p>
             </div>
         </div>
-        <div class="card">
+        <div class="card" style="border-radius: 35px;">
             <div class="card-body">
-                <p>{{weather.day2}}</p>
+                <H3 style="text-transform: uppercase;">{{weather.day2}}</H3>
 
-                <span>Temperature: {{weather.temperature2}}‎°C <img src="http://openweathermap.org/img/w/{{ weather.icon2 }}.png" alt="Image"></span>
-                <p>Description: {{weather.description2}}</p>
-                <p>Feels like: {{weather.feels_like2}} ° C </p>
-                <p>Humidity Pressure Wind speed</p>
+                <p style="text-align: left; font-size: 22px;">Temperature: <b>{{weather.temperature2}}</b>‎ ° C <img src="http://openweathermap.org/img/w/{{ weather.icon2 }}.png" alt="Image"></p>
+                <p style="text-align: left;">Description: {{weather.description2}}</p>
+                <p style="text-align: left; padding-bottom: 20px;">Feels like: <b>{{weather.feels_like2}} ° C </b></p>
+                <!-- <p style="text-align: left;">Humidity Pressure Wind speed</p> -->
                 <p>
-                    <span><img src="{{url_for('static', filename='icon/humidity (1).png')}}" alt="">  {{weather.humidity5}} %  </span>
-                    <span><img src="{{url_for('static', filename='icon/pressure-indicator.png')}}" alt="">  {{weather.pressure5}}  </span>
-                    <span><img src="{{url_for('static', filename='icon/wind.png')}}" alt="">  {{weather.wind_speed5}} m/s  </span>
+                    <span style="padding-right: 10px;"><img src="{{url_for('static', filename='icon/humidity (1).png')}}" alt="">  {{weather.humidity2}} %  </span>
+                    <span style="padding-right: 10px;"><img src="{{url_for('static', filename='icon/pressure-indicator.png')}}" alt="">  {{weather.pressure2}}  </span>
+                    <span style="padding-right: 10px;"><img src="{{url_for('static', filename='icon/wind.png')}}" alt="">  {{weather.wind_speed2}} m/s  </span>
                 </p>
             </div>
         </div>
-        <div class="card">
+        <div class="card" style="border-radius: 35px;">
             <div class="card-body">
-                <p>{{weather.day3}}</p>
+                <H3 style="text-transform: uppercase;">{{weather.day3}}</H3>
 
-                <span>Temperature: {{weather.temperature3}}‎°C <img src="http://openweathermap.org/img/w/{{ weather.icon3 }}.png" alt="Image"></span>
-                <p>Description: {{weather.description3}}</p>
-                <p>Feels like: {{weather.feels_like3}} ° C </p>
-                <p>Humidity Pressure Wind speed</p>
+                <p style="text-align: left; font-size: 22px;">Temperature: <b>{{weather.temperature3}}</b>‎ ° C <img src="http://openweathermap.org/img/w/{{ weather.icon3 }}.png" alt="Image"></p>
+                <p style="text-align: left;">Description: {{weather.description3}}</p>
+                <p style="text-align: left; padding-bottom: 20px;">Feels like: <b>{{weather.feels_like3}} ° C </b></p>
+                <!-- <p style="text-align: left;">Humidity Pressure Wind speed</p> -->
                 <p>
-                    <span><img src="{{url_for('static', filename='icon/humidity (1).png')}}" alt="">  {{weather.humidity5}} %  </span>
-                    <span><img src="{{url_for('static', filename='icon/pressure-indicator.png')}}" alt="">  {{weather.pressure5}}  </span>
-                    <span><img src="{{url_for('static', filename='icon/wind.png')}}" alt="">  {{weather.wind_speed5}} m/s  </span>
+                    <span style="padding-right: 10px;"><img src="{{url_for('static', filename='icon/humidity (1).png')}}" alt="">  {{weather.humidity3}} %  </span>
+                    <span style="padding-right: 10px;"><img src="{{url_for('static', filename='icon/pressure-indicator.png')}}" alt="">  {{weather.pressure3}}  </span>
+                    <span style="padding-right: 10px;"><img src="{{url_for('static', filename='icon/wind.png')}}" alt="">  {{weather.wind_speed3}} m/s  </span>
                 </p>
             </div>
         </div>
-        <div class="card">
+        <div class="card" style="border-radius: 35px;">
             <div class="card-body">
-                <p>{{weather.day4}}</p>
+                <H3 style="text-transform: uppercase;">{{weather.day4}}</H3>
 
-                <span>Temperature: {{weather.temperature4}}‎°C <img src="http://openweathermap.org/img/w/{{ weather.icon4 }}.png" alt="Image"></span>
-                <p>Description: {{weather.description4}}</p>
-                <p>Feels like: {{weather.feels_like4}} ° C </p>
-                <p>Humidity Pressure Wind speed</p>
+                <p style="text-align: left; font-size: 22px;">Temperature: <b>{{weather.temperature4}}</b>‎ ° C <img src="http://openweathermap.org/img/w/{{ weather.icon4 }}.png" alt="Image"></p>
+                <p style="text-align: left;">Description: {{weather.description4}}</p>
+                <p style="text-align: left; padding-bottom: 20px;">Feels like: <b>{{weather.feels_like4}} ° C </b></p>
+                <!-- <p style="text-align: left;">Humidity Pressure Wind speed</p> -->
                 <p>
-                    <span><img src="{{url_for('static', filename='icon/humidity (1).png')}}" alt="">  {{weather.humidity5}} %  </span>
-                    <span><img src="{{url_for('static', filename='icon/pressure-indicator.png')}}" alt="">  {{weather.pressure5}}  </span>
-                    <span><img src="{{url_for('static', filename='icon/wind.png')}}" alt="">  {{weather.wind_speed5}} m/s  </span>
+                    <span style="padding-right: 10px;"><img src="{{url_for('static', filename='icon/humidity (1).png')}}" alt="">  {{weather.humidity4}} %  </span>
+                    <span style="padding-right: 10px;"><img src="{{url_for('static', filename='icon/pressure-indicator.png')}}" alt="">  {{weather.pressure4}}  </span>
+                    <span style="padding-right: 10px;"><img src="{{url_for('static', filename='icon/wind.png')}}" alt="">  {{weather.wind_speed4}} m/s  </span>
                 </p>
             </div>
         </div>
-        <div class="card">
+        <div class="card" style=" border-radius: 35px;">
             <div class="card-body">
-                <p>{{weather.day5}}</p>
+                <H3 style="text-transform: uppercase;">{{weather.day5}}</H3>
 
-                <span>Temperature: {{weather.temperature5}}‎°C <img src="http://openweathermap.org/img/w/{{ weather.icon5 }}.png" alt="Image"></span>
-                <p>Description: {{weather.description5}}</p>
-                <p>Feels like: {{weather.feels_like5}} ° C </p>
-                <p>Humidity Pressure Wind speed</p>
+                <p style="text-align: left; font-size: 22px;">Temperature: <b>{{weather.temperature5}}</b>‎ ° C <img src="http://openweathermap.org/img/w/{{ weather.icon5 }}.png" alt="Image"></p>
+                <p style="text-align: left;">Description: {{weather.description5}}</p>
+                <p style="text-align: left; padding-bottom: 20px;">Feels like: <b>{{weather.feels_like5}} ° C </b></p>
+                <!-- <p style="text-align: left;">Humidity Pressure Wind speed</p> -->
                 <p>
-                    <span><img src="{{url_for('static', filename='icon/humidity (1).png')}}" alt="">  {{weather.humidity5}} %  </span>
-                    <span><img src="{{url_for('static', filename='icon/pressure-indicator.png')}}" alt="">  {{weather.pressure5}}  </span>
-                    <span><img src="{{url_for('static', filename='icon/wind.png')}}" alt="">  {{weather.wind_speed5}} m/s  </span>
+                    <span style="padding-right: 10px;"><img src="{{url_for('static', filename='icon/humidity (1).png')}}" alt="">  {{weather.humidity5}} %  </span>
+                    <span style="padding-right: 10px;"><img src="{{url_for('static', filename='icon/pressure-indicator.png')}}" alt="">  {{weather.pressure5}}  </span>
+                    <span style="padding-right: 10px;"><img src="{{url_for('static', filename='icon/wind.png')}}" alt="">  {{weather.wind_speed5}} m/s  </span>
                 </p>
             </div>
         </div>
