@@ -17,7 +17,6 @@ def get_weather_data(city): # definisanje funkcije koja prihvata ime grada i pra
     r = requests.get(url).json()
     return r
 
-dani[5] ={0, 8, 16,24,32}
 @app.route('/') #Flask putanja za GET metod
 def index_get(): #definicija funkcije index_get
     city='Topola'
